@@ -1,0 +1,9 @@
+name: CommandWhitelist
+version: ${project.version}
+main: dev.coolprogrammer.commandwhitelist.CommandWhitelist
+api-version: 1.13
+commands:
+  cmdwhitelist:
+    aliases: [cmdw, cw]
+    permission: server.cmdwhitelist
+    permission message: You need permission "server.cmdwhitelist" to use that command.
