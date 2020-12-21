@@ -90,10 +90,11 @@ public final class CommandWhitelist extends JavaPlugin implements CommandExecuto
                     return true;
                 }
             } catch (ArrayIndexOutOfBoundsException | NullPointerException | IOException | InvalidConfigurationException exception) {
-                player.sendMessage(ChatColor.RED + "Command Usage:");
-                player.sendMessage(ChatColor.RED + "/" + label + " add (command without /)");
-                player.sendMessage(ChatColor.RED + "/" + label + " remove (command without /)");
-                player.sendMessage(ChatColor.RED + "/" + label + " reload");
+                Utility.sendMessage(player, "&cSomething went wrong when you executed &e" + label + "&c.");
+                Utility.sendMessage(player, "&cPlease check your arguments.");
+                Utility.sendMessage(player, "&e/" + label + " add (command without /)");
+                Utility.sendMessage(player, "&e/" + label + " remove (command without /)");
+                Utility.sendMessage(player, "&e/" + label + " reload");
                 return true;
             }
             return true;
